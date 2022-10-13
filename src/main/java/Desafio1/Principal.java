@@ -10,7 +10,7 @@ public class Principal {
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         File lote01File;
         try {
-            lote01File = new File(Objects.requireNonNull(classLoader.getResource("lote01.txt")).toURI());
+            lote01File = new File(Objects.requireNonNull(classLoader.getResource("Desafio1/lote01.txt")).toURI());
         }
         catch (URISyntaxException e) {
             throw new RuntimeException(e);
