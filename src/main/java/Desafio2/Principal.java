@@ -8,7 +8,6 @@ public class Principal {
     private static Map<String, ConteoInversiones> counters;
     private static final String resourcesFolder = "Desafio2/";
     public static void main(String[] args) {
-        System.out.println("Desafio 2");
         fileManager = new FileManager();
         counters = new HashMap<>();
 
