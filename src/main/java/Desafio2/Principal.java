@@ -13,32 +13,32 @@ public class Principal {
 
         //Pregunta 1
         final String LOTE01 = "lote01.txt";
-        //constructCounter(LOTE01);
-        //executeBruteForceCountForFile(LOTE01);
+//        constructCounter(LOTE01);
+//        executeBruteForceCountForFile(LOTE01);
 
         //Pregunta 2
-        final String LOTE02 = "lote02.txt";
-        //constructCounter(LOTE02);
-        //executeBruteForceCountForFile(LOTE02);
+//        final String LOTE02 = "lote02.txt";
+//        constructCounter(LOTE02);
+//        executeBruteForceCountForFile(LOTE02);
 
         //Pregunta 4
         final String MSS01 = "mss01.txt";
 //        constructCounter(MSS01);
-//        int maxSumMss01 = counters.get(MSS01).cubicBruteForceMaxSubsequenceSum();
+//        long maxSumMss01 = counters.get(MSS01).cubicBruteForceMaxSubsequenceSum();
 //        System.out.println("Max subsequence sum for mss01: " + maxSumMss01);
 
         //Pregunta 5
         final String MSS02 = "mss02.txt";
 //        constructCounter(MSS02);
-//        int maxSumMss02 = counters.get(MSS02).quadraticBruteForceMaxSubsequenceSum();
+//        long maxSumMss02 = counters.get(MSS02).quadraticBruteForceMaxSubsequenceSum();
 //        System.out.println("Max subsequence sum for mss02: " + maxSumMss02);
 
 
         //Pregunta 6
         final String MSS03 = "mss03.txt";
-        constructCounter(MSS03);
-        int maxSumMss03 = counters.get(MSS03).optimizedMaxSubsequenceSum();
-        System.out.println("Max subsequence sum for mss03: " + maxSumMss03);
+//        constructCounter(MSS03);
+//        long maxSumMss03 = counters.get(MSS03).optimizedMaxSubsequenceSum();
+//        System.out.println("Max subsequence sum for mss03: " + maxSumMss03);
     }
 
     public static void constructCounter(String fileName) {
@@ -54,7 +54,7 @@ public class Principal {
         }
 
         NumberArrayProcessor counter = counters.get(fileName);
-        int cantInversiones = counter.bruteForceMaxInversionsCount();
+        long cantInversiones = counter.bruteForceMaxInversionsCount();
         System.out.println("Inversiones in " + fileName + ": " + cantInversiones);
     }
 }

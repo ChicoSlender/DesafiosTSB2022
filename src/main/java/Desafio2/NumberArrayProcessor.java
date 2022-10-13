@@ -15,9 +15,9 @@ public class NumberArrayProcessor {
      *
      * @return <b>int</b> quantity of inversions in the array
      * */
-    public int bruteForceMaxInversionsCount() {
+    public long bruteForceMaxInversionsCount() {
         System.out.println("Starting brute force count for array...");
-        int counter = 0;
+        long counter = 0L;
 
         for (int i = 0; i < this.arrSize-1; i++) {
             for (int j = i+1; j < this.arrSize; j++) {
@@ -35,8 +35,8 @@ public class NumberArrayProcessor {
      *
      * @return <b>int</b> max subsequence sum of the array
      * */
-    public int quadraticBruteForceMaxSubsequenceSum() {
-        int maxSum = 0;
+    public long quadraticBruteForceMaxSubsequenceSum() {
+        long maxSum = 0L;
         int sum;
 
         for (int i = 0; i < this.arrSize; i++) {
@@ -57,8 +57,8 @@ public class NumberArrayProcessor {
      *
      * @return <b>int</b> max subsequence sum of the array
      * */
-    public int cubicBruteForceMaxSubsequenceSum() {
-        int maxSum = 0;
+    public long cubicBruteForceMaxSubsequenceSum() {
+        long maxSum = 0L;
         int sum;
 
         for (int i = 0; i < this.arrSize; i++) {
@@ -82,8 +82,8 @@ public class NumberArrayProcessor {
      *
      * @return <b>int</b> max subsequence sum of the array
      * */
-    public int optimizedMaxSubsequenceSum() {
-        int maxSum = 0;
+    public long optimizedMaxSubsequenceSum() {
+        long maxSum = 0L;
         int sum = 0;
 
         for (int i = 0; i < this.arrSize; i++) {
