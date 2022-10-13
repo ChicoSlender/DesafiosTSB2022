@@ -11,11 +11,13 @@ import java.util.Scanner;
 public class FileManager
 {
     public Integer[] extractIntArrayFromFile(String fileName) {
+        System.out.println("Extracting array from file...");
+
         ArrayList<Integer> numberArray = new ArrayList<>();
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         File numberFile;
         try {
-            numberFile = new File(Objects.requireNonNull(classLoader.getResource("Desafio1/lote01.txt")).toURI());
+            numberFile = new File(Objects.requireNonNull(classLoader.getResource(fileName)).toURI());
         }
         catch (URISyntaxException e) {
             throw new RuntimeException(e);
