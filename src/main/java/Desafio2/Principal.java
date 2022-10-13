@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Principal {
     private static FileManager fileManager;
-    private static Map<String, ConteoInversiones> counters;
+    private static Map<String, NumberArrayProcessor> counters;
     private static final String resourcesFolder = "Desafio2/";
     public static void main(String[] args) {
         fileManager = new FileManager();
@@ -20,12 +20,31 @@ public class Principal {
         final String LOTE02 = "lote02.txt";
         //constructCounter(LOTE02);
         //executeBruteForceCountForFile(LOTE02);
+
+        //Pregunta 4
+        final String MSS01 = "mss01.txt";
+//        constructCounter(MSS01);
+//        int maxSumMss01 = counters.get(MSS01).cubicBruteForceMaxSubsequenceSum();
+//        System.out.println("Max subsequence sum for mss01: " + maxSumMss01);
+
+        //Pregunta 5
+        final String MSS02 = "mss02.txt";
+//        constructCounter(MSS02);
+//        int maxSumMss02 = counters.get(MSS02).quadraticBruteForceMaxSubsequenceSum();
+//        System.out.println("Max subsequence sum for mss02: " + maxSumMss02);
+
+
+        //Pregunta 6
+        final String MSS03 = "mss03.txt";
+        constructCounter(MSS03);
+        int maxSumMss03 = counters.get(MSS03).optimizedMaxSubsequenceSum();
+        System.out.println("Max subsequence sum for mss03: " + maxSumMss03);
     }
 
     public static void constructCounter(String fileName) {
         Integer[] arr = fileManager.extractIntArrayFromFile(resourcesFolder+fileName);
         System.out.println("Array length for file " + fileName + ": " + arr.length);
-        counters.put(fileName, new ConteoInversiones(arr));
+        counters.put(fileName, new NumberArrayProcessor(arr));
     }
 
     public static void executeBruteForceCountForFile(String fileName) {
@@ -34,8 +53,8 @@ public class Principal {
             return;
         }
 
-        ConteoInversiones counter = counters.get(fileName);
-        int cantInversiones = counter.bruteForceCount();
+        NumberArrayProcessor counter = counters.get(fileName);
+        int cantInversiones = counter.bruteForceMaxInversionsCount();
         System.out.println("Inversiones in " + fileName + ": " + cantInversiones);
     }
 }
